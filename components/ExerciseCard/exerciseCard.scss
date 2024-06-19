@@ -1,0 +1,12 @@
+.exercise-card {
+  max-width: calc(100vw - 20px);
+  &__button {
+    @media screen and (max-width: 465px) {
+      width: 10px;
+      :deep(svg) {
+        min-width: 12px;
+        min-height: 12px;
+      }
+    }
+  }
+}
