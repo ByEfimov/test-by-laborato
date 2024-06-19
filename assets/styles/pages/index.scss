@@ -10,36 +10,3 @@
     }
   }
 }
-
-.exercise {
-  &__badge {
-    background: hsl(var(--secondary));
-    color: aliceblue;
-    font-weight: 500;
-    transition: background 0.3s;
-    &:hover {
-      cursor: pointer;
-      background: hsl(var(--primary));
-    }
-    &--active {
-      background: hsl(var(--primary));
-    }
-  }
-  &__actions {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    @media screen and (max-width: 1200px) {
-      opacity: 1;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    &:hover {
-      .exercise__actions {
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
-  }
-}

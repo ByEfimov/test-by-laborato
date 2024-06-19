@@ -31,6 +31,6 @@ const exercisesWithFilters = computed(() =>
 );
 </script>
 
-<style coped lang="scss">
+<style scoped lang="scss">
 @import "@/assets/styles/pages/index.scss";
 </style>

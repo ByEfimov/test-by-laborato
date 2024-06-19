@@ -1,11 +1,82 @@
 .exercise-card {
   max-width: calc(100vw - 20px);
-  &__button {
-    @media screen and (max-width: 465px) {
+  position: relative;
+
+  // &__content {
+  //   flex-shrink: 0;
+  // }
+  &__actions {
+    position: absolute;
+    right: 10px;
+  }
+
+  &__content {
+    margin-right: 130px;
+  }
+
+  @media screen and (max-width: 465px) {
+    padding: 10px;
+
+    &__button {
       width: 10px;
       :deep(svg) {
         min-width: 12px;
         min-height: 12px;
+      }
+    }
+
+    &__content {
+      flex-direction: column-reverse;
+      margin-top: 3px;
+      margin-right: 0px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    &__badges {
+      gap: 5px;
+    }
+
+    &__actions {
+      width: fit-content;
+      top: 10px;
+    }
+  }
+
+  &__badges {
+    align-items: center;
+  }
+
+  &__badge {
+    height: 22px;
+    background: hsl(var(--secondary));
+    color: aliceblue;
+    font-weight: 500;
+    transition: background 0.3s;
+    &:hover {
+      cursor: pointer;
+      background: hsl(var(--primary));
+    }
+    &--active {
+      background: hsl(var(--primary));
+    }
+  }
+
+  &__actions {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    @media screen and (max-width: 1200px) {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      .exercise-card__actions {
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }
