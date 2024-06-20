@@ -1,10 +1,7 @@
 .exercise-card {
   max-width: calc(100vw - 20px);
   position: relative;
-
-  // &__content {
-  //   flex-shrink: 0;
-  // }
+
   &__actions {
     position: absolute;
     right: 10px;
